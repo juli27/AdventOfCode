@@ -40,9 +40,9 @@ public class Day02 implements Solution {
       // skip "Game "
       lexer.advance(5);
 
-      final var gameId1 = lexer.nextInt();
+      final var gameId = lexer.nextInt();
 
-      final var revealedCubes1 = new ArrayList<SetOfCubes>();
+      final var revealedCubes = new ArrayList<SetOfCubes>();
       do {
         var numRed = 0;
         var numGreen = 0;
@@ -79,10 +79,10 @@ public class Day02 implements Solution {
           }
         } while (lexer.hasNext() && lexer.peek() == ',');
 
-        revealedCubes1.add(new SetOfCubes(numRed, numGreen, numBlue));
+        revealedCubes.add(new SetOfCubes(numRed, numGreen, numBlue));
       } while (lexer.hasNext() && lexer.peek() == ';');
 
-      return new PlayedGame(gameId1, revealedCubes1);
+      return new PlayedGame(gameId, revealedCubes);
     }
 
     private boolean isPossible(SetOfCubes cubesInBag) {

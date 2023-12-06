@@ -2,6 +2,8 @@ package aoc.juli27;
 
 import static java.util.Objects.requireNonNull;
 
+import java.util.function.IntPredicate;
+
 public class Lexer {
   private final String input;
   private int nextCharIndex = 0;
@@ -12,9 +14,7 @@ public class Lexer {
 
   public int nextInt() {
     final var intSubstringStart = nextCharIndex;
-    while (Character.isDigit(peek())) {
-      advance();
-    }
+    advanceToEndWhile(Character::isDigit);
 
     return Integer.parseInt(input, intSubstringStart, nextCharIndex, 10);
   }
@@ -24,6 +24,16 @@ public class Lexer {
     advance();
 
     return next;
+  }
+
+  public void advanceToEndWhile(IntPredicate predicate) {
+    while (hasNext() && predicate.test(peek())) {
+      advance();
+    }
+  }
+
+  public void advanceToEndUntil(IntPredicate predicate) {
+    advanceToEndWhile(predicate.negate());
   }
 
   public void advance() {
@@ -38,7 +48,15 @@ public class Lexer {
     return input.charAt(nextCharIndex);
   }
 
+  public boolean isAtEnd() {
+    return !hasNext();
+  }
+
   public boolean hasNext() {
     return nextCharIndex < input.length();
+  }
+
+  public int getIndexOfNext() {
+    return nextCharIndex;
   }
 }
