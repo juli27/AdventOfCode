@@ -10,7 +10,8 @@ public class App {
     private static final List<Solution> solutions = List.of(
         new Day01(),
         new Day02(),
-        new Day03());
+        new Day03(),
+        new Day04());
 
     public static void main(String[] args) throws Exception {
         final var day = args.length >= 1
