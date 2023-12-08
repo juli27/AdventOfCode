@@ -19,6 +19,13 @@ public class Lexer {
     return Integer.parseInt(input, intSubstringStart, nextCharIndex, 10);
   }
 
+  public long nextLong() {
+    final var longSubstringStart = nextCharIndex;
+    advanceToEndWhile(Character::isDigit);
+
+    return Long.parseLong(input, longSubstringStart, nextCharIndex, 10);
+  }
+
   public char next() {
     final var next = peek();
     advance();

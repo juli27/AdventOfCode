@@ -11,7 +11,8 @@ public class App {
         new Day01(),
         new Day02(),
         new Day03(),
-        new Day04());
+        new Day04(),
+        new Day05());
 
     public static void main(String[] args) throws Exception {
         final var day = args.length >= 1
