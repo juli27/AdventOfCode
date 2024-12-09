@@ -7,6 +7,8 @@ import com.google.common.collect.RangeMap;
 import com.google.common.collect.RangeSet;
 import com.google.common.collect.TreeRangeSet;
 
+import io.github.juli27.aoc.Lexer;
+import io.github.juli27.aoc.Solution;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;

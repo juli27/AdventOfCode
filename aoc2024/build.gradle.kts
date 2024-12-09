@@ -7,11 +7,11 @@ repositories {
 }
 
 dependencies {
+    implementation(project(":aoc"))
+
     testImplementation(libs.junit.jupiter)
 
     testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-
-    implementation(libs.guava)
 }
 
 java {

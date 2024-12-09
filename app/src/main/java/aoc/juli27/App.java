@@ -1,5 +1,6 @@
 package aoc.juli27;
 
+import io.github.juli27.aoc.Solution;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;

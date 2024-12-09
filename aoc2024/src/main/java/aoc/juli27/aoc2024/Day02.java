@@ -1,5 +1,7 @@
 package aoc.juli27.aoc2024;
 
+import io.github.juli27.aoc.Lexer;
+import io.github.juli27.aoc.Solution;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
@@ -23,7 +25,7 @@ public class Day02 implements Solution {
             return 1;
           }
 
-          // brute force: remove each element once until report is safe
+          // brute force: remove an element then check if report is safe
           for (int i = 0; i < report.size(); i++) {
             var reportCopy = new ArrayList<>(report);
             reportCopy.remove(i);

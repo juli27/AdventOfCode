@@ -1,5 +1,7 @@
 package aoc.juli27;
 
+import io.github.juli27.aoc.Lexer;
+import io.github.juli27.aoc.Solution;
 import java.util.List;
 import java.util.stream.Stream;
 

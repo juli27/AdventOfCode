@@ -1,5 +1,6 @@
 package aoc.juli27;
 
+import io.github.juli27.aoc.Solution;
 import java.util.Map;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;

@@ -1,5 +1,7 @@
 package aoc.juli27.aoc2024;
 
+import io.github.juli27.aoc.Lexer;
+import io.github.juli27.aoc.Solution;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.stream.Stream;

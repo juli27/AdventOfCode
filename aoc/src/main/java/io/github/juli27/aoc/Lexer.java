@@ -1,4 +1,4 @@
-package aoc.juli27.aoc2024;
+package io.github.juli27.aoc;
 
 import static java.util.Objects.requireNonNull;
 
