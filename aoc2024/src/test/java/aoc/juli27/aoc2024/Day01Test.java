@@ -3,7 +3,6 @@ package aoc.juli27.aoc2024;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.util.stream.Stream;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 class Day01Test {
